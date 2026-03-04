@@ -1,0 +1,76 @@
+name: georgescamera_app
+description: "Application Flutter de gestion d’endroits favoris avec caméra."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Icônes iOS style Cupertino
+  cupertino_icons: ^1.0.8
+
+  # Génération d'identifiants uniques
+  uuid: ^4.5.1
+
+  # Gestion d’état (Riverpod)
+  flutter_riverpod: ^2.5.1
+
+  # Accès caméra / galerie
+  image_picker: ^1.1.2
+
+  # Google Maps
+  google_maps_flutter: ^2.6.1
+
+  # Géolocalisation
+  geolocator: ^11.0.0
+  location: ^6.0.2
+
+  # SQLite (persistance locale)
+  sqflite: ^2.3.3
+  path: ^1.9.0
+  path_provider: ^2.1.4
+
+  # Navigation GPS (itinéraire)
+  url_launcher: ^6.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Bonnes pratiques et règles de lint
+  flutter_lints: ^5.0.0
+
+  # Génération automatique des icônes Android & iOS
+  flutter_launcher_icons: ^0.13.1
+
+  # Splash screen natif
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+
+# 🔽 Configuration de l’icône de l’application
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+
+# 🔽 Configuration du splash screen 
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/icon.png
+
+  android_12:
+    color: "#FFFFFF"
+    image: assets/images/icon.png
+
+  ios: true
+  android: true
+  web: false
